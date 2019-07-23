@@ -4,6 +4,8 @@ import pageRoutes from './router.config';
 import webpackPlugin from './plugin.config';
 import defaultSettings from '../src/defaultSettings';
 
+const HOST = 'http://192.168.0.17:9999/';
+
 export default {
   // add for transfer to umi
   plugins: [
@@ -63,23 +65,23 @@ export default {
   },
   proxy: {
     '/auth/': {
-      target: 'http://192.168.0.31:9999/',
+      target: HOST,
       changeOrigin: true,
     },
     '/admin/': {
-      target: 'http://192.168.0.31:9999/',
+      target: HOST,
       changeOrigin: true,
     },
     '/labor/': {
-      target: 'http://192.168.0.31:9999/',
+      target: HOST,
       changeOrigin: true,
     },
     '/fdfs/': {
-      target: 'http://192.168.0.31:9999/',
+      target: HOST,
       changeOrigin: true,
     },
     '/webapi/': {
-      target: 'http://192.168.0.31:9999/',
+      target: HOST,
       changeOrigin: true,
     },
     '/elastic_sskj/': {
